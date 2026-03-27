@@ -8,8 +8,7 @@ const AIPrompt_Response = require("./schema.js")
 
 
 const corsOptions = {
-
-    origin: ["http://localhost:3000","https://ai-flowapp.vercel.app"],
+    origin: ["http://localhost:3000","https://ai-flow-frontend-steel.vercel.app"],
     methods: "GET, POST, DELETE, PUT, PATCH, HEAD",
     credentials: true
 }
