@@ -6,7 +6,14 @@ const connectDB = require("./db.js")
 const app = express();
 const AIPrompt_Response = require("./schema.js")
 
-app.use(cors());
+
+const corsOptions = {
+
+    origin: ["http://localhost:3000","https://ai-flowapp.vercel.app"],
+    methods: "GET, POST, DELETE, PUT, PATCH, HEAD",
+    credentials: true
+}
+app.use(cors(corsOptions));
 app.use(express.json());
 
 app.post("/api/ask-ai", async (req, res) => {
