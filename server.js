@@ -72,6 +72,7 @@ app.get("/api/get", async(req, res) => {
 
 connectDB().then(() => {
     app.listen(process.env.PORT, () => console.log("Server running on port 5000"));
+        console.log("API KEY:", process.env.OPENROUTER_API_KEY);
 });
 
 
